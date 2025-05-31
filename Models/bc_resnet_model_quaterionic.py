@@ -1,3 +1,13 @@
+import os
+import sys
+
+# Add the project root directory to the sys.path
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(project_root)
+
+# Add subdirectories if needed
+sys.path.append(os.path.join(project_root, 'Models'))
+
 import torch
 from torch import nn
 import torch.nn.functional as F
